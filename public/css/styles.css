@@ -11395,7 +11395,7 @@ hr.divider-light {
 }
 .sidebar-circle {
   /*background-color: #7d838a;*/
-  background-image: url("../assets/Speedline\ Media/phone.png");
+  background-image: url("../assets/Speedline\ Media/phone.webp");
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -11486,7 +11486,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/Speedline\ Media/background.jpeg");
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/Speedline\ Media/background.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
