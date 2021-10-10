@@ -4,6 +4,7 @@
   grid-gap: 1rem;
   position: relative;
   margin-top: 4rem;
+  padding-bottom: 4rem;
 }
 .grid_columns .grid {
   transition: 0.5s ease-out;
@@ -74,17 +75,26 @@
   background: rgba(0, 0, 0, 0.7);
 }
 .grid:first-child section {
-  background-image: url(https://cdn.pixabay.com/photo/2017/09/01/20/23/ford-2705402_960_720.jpg);
+  background-image: url("../assets/Stock\ Media/red-mclaren-bg.webp");
   border-radius: 20px;
 }
 .grid:nth-child(2) section {
-  background-image: url(https://cdn.pixabay.com/photo/2015/05/15/14/46/bmw-768688_960_720.jpg);
+  background-image: url("../assets/Stock\ Media/red-antique-bg.webp");
 }
 .grid:nth-child(3) section {
-  background-image: url(https://cdn.pixabay.com/photo/2017/03/27/14/56/auto-2179220_960_720.jpg);
+  background-image: url("../assets/Stock\ Media/red-mercedes-bg.webp");
 }
 .grid:nth-child(4) section {
-  background-image: url(https://cdn.pixabay.com/photo/2015/06/08/15/18/steering-wheel-801994_960_720.jpg);
+  background-image: url("../assets/Stock\ Media/red-civic-bg.webp");
+}
+.grid:nth-child(5) section {
+  background-image: url("../assets/Stock\ Media/red-civic-bg.webp");
+}
+.grid:nth-child(6) section {
+  background-image: url("../assets/Stock\ Media/red-civic-bg.webp");
+}
+.grid:nth-child(7) section {
+  background-image: url("../assets/Stock\ Media/red-civic-bg.webp");
 }
 /* .grid:hover section {
   display: none;
