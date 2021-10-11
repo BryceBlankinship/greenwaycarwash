@@ -11394,7 +11394,7 @@ hr.divider-light {
   display: none;
 }
 .sidebar-circle {
-  /*background-color: #7d838a;*/
+  /*background-color: #7d838a;*;
   background-image: url("../assets/Speedline\ Media/phone.webp");
   display: inline-block;
   width: 50px;
