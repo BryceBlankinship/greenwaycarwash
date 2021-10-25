@@ -75,11 +75,11 @@
   background: rgba(0, 0, 0, 0.7);
 }
 .grid:first-child section {
-  background-image: url("../assets/Stock\ Media/red-mclaren-bg.webp");
+  background-image: url("../assets/Stock\ Media/red-antique-bg.webp");
   border-radius: 20px;
 }
 .grid:nth-child(2) section {
-  background-image: url("../assets/Stock\ Media/red-antique-bg.webp");
+  background-image: url("../assets/Stock\ Media/red-mclaren-bg.webp");
 }
 .grid:nth-child(3) section {
   background-image: url("../assets/Stock\ Media/red-mercedes-bg.webp");
