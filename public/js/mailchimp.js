@@ -1,29 +1,9 @@
-const mailchimpFactory = require("../../functions/node_modules/@mailchimp/mailchimp_transactional/src/index.js");
+import mailchimpFactory from "@mailchimp/mailchimp_transactional";
+//const mailchimpFactory = require("@mailchimp/mailchimp_transactional");
 const mailchimp = mailchimpFactory("JfphREqqlFD4vbjGdjO6xw");
 
-/** 
-const message = {
-    from_email: "no-reply@speedlinewash.com",
-    subject: "Hello world",
-    text: "Welcome to Mailchimp Transactional!",
-    to: [
-      {
-        email: "blankinship2002@gmail.com",
-        type: "to"
-      }
-    ]
-  };
-  
-  async function run() {
-    const response = await mailchimp.messages.send({
-      message
-    });
-    console.log(response);
-  }
-  run();
-*/
 
-const sendDiscountEmail = async () => {
+const sendDiscountEmail = async (email) => {
   const response = await mailchimp.messages.sendTemplate({
     template_name: "discount",
     template_content: [{
@@ -37,7 +17,7 @@ const sendDiscountEmail = async () => {
         from_name: "Speedline",
         to: [
             {
-                email: "blankinship2002@gmail.com",
+                email: email,
                 type: "to"
             }
         ],
@@ -49,3 +29,4 @@ const sendDiscountEmail = async () => {
   console.log(response);
 };
 
+sendDiscountEmail(user.email);
