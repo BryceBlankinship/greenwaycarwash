@@ -1,9 +1,8 @@
-import mailchimpFactory from "@mailchimp/mailchimp_transactional";
-//const mailchimpFactory = require("@mailchimp/mailchimp_transactional");
+const mailchimpFactory = require("@mailchimp/mailchimp_transactional");
 const mailchimp = mailchimpFactory("JfphREqqlFD4vbjGdjO6xw");
 
 
-const sendDiscountEmail = async (email) => {
+const sendDiscountEmail = async () => {
   const response = await mailchimp.messages.sendTemplate({
     template_name: "discount",
     template_content: [{
@@ -17,7 +16,7 @@ const sendDiscountEmail = async (email) => {
         from_name: "Speedline",
         to: [
             {
-                email: email,
+                email: "dippolito1968@gmail.com",
                 type: "to"
             }
         ],
@@ -29,4 +28,4 @@ const sendDiscountEmail = async (email) => {
   console.log(response);
 };
 
-sendDiscountEmail(user.email);
+sendDiscountEmail();
