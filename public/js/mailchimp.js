@@ -16,7 +16,7 @@ const sendDiscountEmail = async () => {
         from_name: "Speedline",
         to: [
             {
-                email: "dippolito1968@gmail.com",
+                email: "blankinship2002@gmail.com",
                 type: "to"
             }
         ],
