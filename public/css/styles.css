@@ -76,6 +76,28 @@
   }
 }
 
+.primary-divider-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.primary-divider-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+  transform: rotateY(180deg);
+}
+
+.primary-divider-wave .shape-fill {
+  fill: rgb(var(--bs-primary-rgb));
+}
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
