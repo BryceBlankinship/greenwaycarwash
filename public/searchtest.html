@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Test</title>
+  <link rel="stylesheet" href="css/search.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="select-box">
+      <div class="options-container">
+        <div class="option" onclick="window.location.replace('/public/services.html#services');">
+          <input type="radio" class="radio" id="flex" name="category"/>
+          <label for="flex">What is Flex Detail?</label>
+        </div>
+
+        <div class="option" onclick="window.location.replace('/public/services.html#services');">
+          <input type="radio" class="radio" id="wash club" name="category" />
+          <label for="wash club">Wash Club Information</label>
+        </div>
+
+        <div class="option" onclick="window.location.replace('/public/index.html#promo2');">
+          <input type="radio" class="radio" id="gift cards" name="category" />
+          <label for="gift cards">Gift Cards</label>
+        </div>
+
+        <div class="option" onclick="window.location.replace('/public/services.html');">
+          <input type="radio" class="radio" id="services" name="category" />
+          <label for="services">All Services</label>
+        </div>
+
+        <div class="option" onclick="window.location.replace('/public/contact.html');">
+          <input type="radio" class="radio" id="contact" name="category" />
+          <label for="contact">Get in Contact</label>
+        </div>
+
+        <div class="option" onclick="window.location.replace('/public/services.html#contact');">
+          <input type="radio" class="radio" id="hours" name="category" />
+          <label for="hours">Store Hours</label>
+        </div>
+
+        <div class="option" onclick="window.location.replace('/public/index.html#reviews');">
+          <input type="radio" class="radio" id="reviews" name="category" />
+          <label for="reviews">Customer Reviews</label>
+        </div>
+
+        <div class="option" onclick="window.location.replace('/public/pinnacle.html');">
+          <input type="radio" class="radio" id="pinnacle" name="category" />
+          <label for="pinnacle">Advanced (Pinnacle) Detailing</label>
+        </div>
+
+        <div class="option" onclick="window.location.replace('/public/services.html#pricing');">
+          <input type="radio" class="radio" id="pricing" name="category"/>
+          <label for="pricing">Prices</label>
+        </div>
+      </div>
+
+      <div class="selected">
+        🔍 Search Speedline
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Start Typing..." />
+      </div>
+    </div>
+  </div>
+
+  <script src="js/search.js"></script>
+
+</body>
+</html>

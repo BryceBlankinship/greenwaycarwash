@@ -4,21 +4,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="theme-color" content="#FFFFFF"/>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="white"/>
   <title>Speedline | Car Wash & Interior Detailing</title>
   <meta name="description"
     content="Looking for a car wash near you? We wash your car for a low rate! Automatic wash and hand-detailing available. | Claim Your Discount Here!" />
   <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <!-- Bootstrap Icons-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Downloaded and minified the icons and lightbox css -->
+  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />-->
   <!-- SimpleLightbox plugin CSS-->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-  <!-- Core theme CSS (includes Bootstrap)-->
-  <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="css/styles.css">
-  </noscript>
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />-->
+  <link rel="preload" href="css/icons.pure.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/icons.pure.css"></noscript>
+
+  <!-- Minified CSS -->
+  <!-- Done manually (not good idea but didn't want to go through hassle of Webpack) to make edits, change stylesheet in test to styles.css, then minify changes. -->
+  <link rel="preload" href="css/styleindex.pure.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/styleindex.pure.css"></noscript>
+
+  <!-- Search Bar CSS (already small file) -->
+  <link rel="preload" href="css/search.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/search.css"></noscript>
 
   <meta name="google-site-verification" content="ypUikWn42qLcqfr7pq7aEq5ZEqe-yi8qkxvlErLpujE" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -88,24 +95,89 @@
           <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/pinnacle.html">Pinnacle Detailing</a></li>
           <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="/careers.html">Careers</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
   <!-- Masthead-->
   <header class="masthead">
     <div class="container px-4 px-lg-5 h-100">
       <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+
         <div class="col-lg-8 align-self-end">
           <h1 class="text-white font-weight-bold">Welcome to Speedline</h1>
           <hr class="divider" />
+
         </div>
         <div class="col-lg-8 align-self-baseline">
           <p class="text-white-75 mb-5">Just Seconds Away to a Clean Car!</p>
-          <a class="btn btn-primary btn-xl" href="/services.html">View Services</a>
+          <div class="search-container">
+            <div class="select-box">
+              <div class="options-container">
+                <div class="option" onclick="window.location.replace('/services.html#services');">
+                  <input type="radio" class="radio" id="flex" name="category"/>
+                  <label for="flex">What is Flex Detail?</label>
+                </div>
+
+                <div class="option" onclick="window.location.replace('/services.html#services');">
+                  <input type="radio" class="radio" id="wash club" name="category" />
+                  <label for="wash club">Wash Club Information</label>
+                </div>
+
+                <div class="option" onclick="window.location.replace('/index.html#promo2');">
+                  <input type="radio" class="radio" id="gift cards" name="category" />
+                  <label for="gift cards">Gift Cards</label>
+                </div>
+
+                <div class="option" onclick="window.location.replace('/services.html');">
+                  <input type="radio" class="radio" id="services" name="category" />
+                  <label for="services">All Services</label>
+                </div>
+
+                <div class="option" onclick="window.location.replace('/contact.html');">
+                  <input type="radio" class="radio" id="contact" name="category" />
+                  <label for="contact">Get in Contact</label>
+                </div>
+
+                <div class="option" onclick="window.location.replace('/services.html#contact');">
+                  <input type="radio" class="radio" id="hours" name="category" />
+                  <label for="hours">Store Hours</label>
+                </div>
+
+                <div class="option" onclick="window.location.replace('/index.html#reviews');">
+                  <input type="radio" class="radio" id="reviews" name="category" />
+                  <label for="reviews">Customer Reviews</label>
+                </div>
+
+                <div class="option" onclick="window.location.replace('/pinnacle.html');">
+                  <input type="radio" class="radio" id="pinnacle" name="category" />
+                  <label for="pinnacle">Advanced (Pinnacle) Detailing</label>
+                </div>
+
+                <div class="option" onclick="window.location.replace('/services.html#pricing');">
+                  <input type="radio" class="radio" id="pricing" name="category"/>
+                  <label for="pricing">Prices</label>
+                </div>
+              </div>
+
+              <div class="selected">
+                🔍 Search Speedline
+              </div>
+
+              <div class="search-box">
+                <input type="text" placeholder="Start Typing..." />
+              </div>
+            </div>
+          </div>
+
+          <script src="js/search.js"></script>
+
         </div>
+
       </div>
     </div>
   </header>
@@ -115,7 +187,6 @@
     <!--<input type="checkbox" name="sidebar-checkbox" id="sidebar-checkbox">-->
     <label class="sidebar-circle" for="sidebar-checkbox"><a id="noshow" href="tel:9085348776">Click</a><i
         class="fa fa-plus"></i></label>
-    <!--<div class="sidebar-item-wrapper"></div>-->
   </div>
 
   <!-- Promo -->
@@ -125,7 +196,7 @@
         <div class="col-lg-8 text-center">
           <h2 class="text-white mt-0">Get $5 Off our Diamond Exterior Wash</h2>
           <hr class="divider divider-light" />
-          <p class="text-white-75 mb-4">Click the button below to claim your discount! Offer ends Nov 14th.</p>
+          <p class="text-white-75 mb-4">Click the button below to claim your discount!</p>
           <a class="btn btn-light btn-xl" href="/offer.html">Claim Discount</a>
         </div>
       </div>
@@ -136,11 +207,10 @@
     <div class="container px-4 px-lg-5">
       <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0">Check out our new 90-day Wash Program!</h2>
+          <h2 class="text-white mt-0">Introducing the 90-day Wash Program!</h2>
           <hr class="divider divider-light" />
-          <p class="text-white-75 mb-4">Come on in and ask about our 90-day wash program, or get info on our services
-            page.</p>
-          <a class="btn btn-light btn-xl" href="/services.html">Find out more</a>
+          <p class="text-white-75 mb-4">Makes for an excellent gift! Purchase gift cards in store.</p>
+          <a class="btn btn-light btn-xl" href="/services.html">View Services</a>
         </div>
       </div>
     </div>
@@ -155,28 +225,28 @@
           <div class="mt-5">
             <div class="mb-2"><i class="bi-droplet fs-1 text-primary"></i></div>
             <h3 class="h4 mb-2">Exterior Wash</h3>
-            <p class="text-muted mb-0">We Combine Equipment & Manpower for Fast, Excellent Results.</p>
+            <p class="text-muted mb-0">We Combine Equipment & Manpower for Fast, Excellent Results. Find out more on our <a href="/services.html">services page.</a></p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
             <div class="mb-2"><i class="bi-pin-angle fs-1 text-primary"></i></div>
             <h3 class="h4 mb-2">Flex Interior</h3>
-            <p class="text-muted mb-0">A Fast, Precise Detail, for an additional $x.xx</p>
+            <p class="text-muted mb-0">A Fast, Precise Detail. Find out more on our <a href="/services.html">services page.</a></p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
             <div class="mb-2"><i class="bi-shield-check fs-1 text-primary"></i></div>
             <h3 class="h4 mb-2">Crisp Wax Finish</h3>
-            <p class="text-muted mb-0">Shining Protection</p>
+            <p class="text-muted mb-0">Shining Protection.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
             <div class="mb-2"><i class="bi-archive fs-1 text-primary"></i></div>
             <h3 class="h4 mb-2">Towel Exchange</h3>
-            <p class="text-muted mb-0">One-time $3 Payment for Unlimited Towels</p>
+            <p class="text-muted mb-0">One-time $3 Payment for Unlimited Towels. Find out more on our <a href="/services.html">services page.</a></p>
           </div>
         </div>
       </div>
@@ -190,7 +260,7 @@
           <a class="portfolio-box" href="assets/Speedline Media/Antique1.webp" title="Project Name">
             <img loading="lazy" class="img-fluid" src="assets/Speedline Media/Antique1.webp" alt="..." />
             <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">Category</div>
+              <div class="project-category text-white-50">Speedline Car Wash</div>
               <div class="project-name">Mean, Green, & Clean.</div>
             </div>
           </a>
@@ -199,8 +269,8 @@
           <a class="portfolio-box" href="assets/Speedline Media/AntiqueExterior.webp" title="Project Name">
             <img loading="lazy" class="img-fluid" src="assets/Speedline Media/AntiqueExterior.webp" alt="..." />
             <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
+              <div class="project-category text-white-50">Speedline Car Wash</div>
+              <div class="project-name">Ole Red.</div>
             </div>
           </a>
         </div>
@@ -208,8 +278,8 @@
           <a class="portfolio-box" href="assets/Speedline Media/HeadlightOldNew.webp" title="Project Name">
             <img loading="lazy" class="img-fluid" src="assets/Speedline Media/HeadlightOldNew.webp" alt="..." />
             <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
+              <div class="project-category text-white-50">Speedline Car Wash</div>
+              <div class="project-name">Headlight Restoration</div>
             </div>
           </a>
         </div>
@@ -217,8 +287,8 @@
           <a class="portfolio-box" href="assets/Speedline Media/CorvetteEngine.webp" title="Project Name">
             <img loading="lazy" class="img-fluid" src="assets/Speedline Media/CorvetteEngine.webp" alt="..." />
             <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
+              <div class="project-category text-white-50">Speedline Car Wash</div>
+              <div class="project-name">Clean Engine = Smiles per Gallon</div>
             </div>
           </a>
         </div>
@@ -226,8 +296,8 @@
           <a class="portfolio-box" href="assets/Speedline Media/MercedesEngine.webp" title="Project Name">
             <img loading="lazy" class="img-fluid" src="assets/Speedline Media/MercedesEngine.webp" alt="..." />
             <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
+              <div class="project-category text-white-50">Speedline Car Wash</div>
+              <div class="project-name">Clean Engine = Smiles per Gallon</div>
             </div>
           </a>
         </div>
@@ -235,8 +305,8 @@
           <a class="portfolio-box" href="assets/Speedline Media/BMWExterior.webp" title="Project Name">
             <img loading="lazy" class="img-fluid" src="assets/Speedline Media/BMWExterior.webp" alt="..." />
             <div class="portfolio-box-caption p-3">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
+              <div class="project-category text-white-50">Speedline Car Wash</div>
+              <div class="project-name">No Such Thing as Too Much Shine.</div>
             </div>
           </a>
         </div>
@@ -245,12 +315,12 @@
   </div>
 
   <!-- Reviews -->
-  <section class="page-section bg-dark text-white">
+  <section class="page-section bg-dark text-white" id="reviews">
     <div class="container px-4 px-lg-5 text-center">
       <h2 class="mb-4">Customer Reviews</h2>
       <div class="taggbox-container" style="width:100%;height:100%;overflow: auto;">
         <div class="taggbox-socialwall" data-wall-id="72940" view-url="https://widget.taggbox.com/72940"></div>
-        <script src="https://widget.taggbox.com/embed.min.js" type="text/javascript"></script>
+        <script async src="https://widget.taggbox.com/embed.min.js" type="text/javascript"></script>
       </div>
     </div>
   </section>
@@ -273,7 +343,7 @@
         <div class="col-lg-6">
           <iframe loading="lazy" title="Google Maps View Of Speedline Location."
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.4501708875137!2d-74.76459408415782!3d40.61995317934192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3928c067da543%3A0x8daad0fdabe6fa7b!2sGreen%20Way%20Carwash%20LLC!5e0!3m2!1sen!2sus!4v1633030123407!5m2!1sen!2sus"
-            width="330" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            style="width: 100%; height: 300px;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
       <div class="row gx-4 gx-lg-5 justify-content-center">
