@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/BryceBlankinship/greenwaycarwash/issues"
   },
-  "homepage": "https://github.com/BryceBlankinship/greenwaycarwash#readme"
+  "homepage": "https://github.com/BryceBlankinship/greenwaycarwash#readme",
+  "dependencies": {
+    "@mailchimp/mailchimp_transactional": "^1.0.46"
+  }
 }
