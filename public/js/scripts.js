@@ -36,3 +36,8 @@ window.addEventListener('scroll', event => {
     });
 
 });
+
+let phoneIcon = document.getElementById("sidebar").addEventListener('click', event => {
+  console.log("Phone call attempted from website");
+  window.location.href = "tel:9085348776";
+});
