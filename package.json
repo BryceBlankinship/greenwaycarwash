@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/BryceBlankinship/greenwaycarwash#readme",
   "dependencies": {
-    "@mailchimp/mailchimp_transactional": "^1.0.46"
+    "@mailchimp/mailchimp_transactional": "^1.0.46",
+    "firebase": "^9.6.4"
   }
 }
